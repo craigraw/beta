@@ -48,14 +48,14 @@ Each JSON object must contain 3 members, defined as follows:
 
 {| class="wikitable" 
 |-
-! Reference
+! Member
 ! Description
 |-
 | <tt>type</tt>
 | One of <tt>tx</tt>, <tt>addr</tt>, <tt>pubkey</tt>, <tt>input</tt>, <tt>output</tt> or <tt>xpub</tt>
 |-
 | <tt>ref</tt>
-| Reference to the transaction, address, public key, input, output or xpub
+| Reference to the transaction, address, public key, input, output or extended public key
 |-
 | <tt>label</tt>
 | The label applied to the reference
@@ -96,9 +96,9 @@ The reference is defined for each <tt>type</tt> as follows:
 
 ==Importing==
 
-An importing wallet may ignore records it does not store, and truncate labels if necessary.
-Wallets importing public key records may derive addresses from them to match against known wallet addresses.
-Wallets importing xpubs may match them against signers, for example in a multisig setup.
+* An importing wallet may ignore records it does not store, and truncate labels if necessary.
+* Wallets importing public key records may derive addresses from them to match against known wallet addresses.
+* Wallets importing extended public keys may match them against signers, for example in a multisig setup.
 
 ==Test Vectors==
 

@@ -43,27 +43,25 @@ Further, the JSON Lines format is used (also called newline-delimited JSON)<ref>
 This allows the format to be streamed, and limits the potential for formatting errors to invalidate an entire import.
 
 Further to the JSON Lines specification, an export of labels from a wallet must be a UTF-8 encoded text file, containing one record per line consisting of a valid JSON object.
-Lines are separated by `\n`.
+Lines are separated by <tt>\n</tt>.
 Each JSON object must contain 3 members, defined as follows:
 
-|-----------|------------------------------------------------------------------------------------------|
-| Reference | Description                                                                              |
-|-----------|------------------------------------------------------------------------------------------|
-| `type`    | One of `tx`, `addr`, `pubkey`, `input`, `output` or `xpub`                               |
-| `ref`     | Reference to the transaction, address, public key, input, output or xpub                 |
-| `label`   | Label applied to the reference                                                           |
+| Reference        | Description                                                                                          |
+| ---------------- | ---------------------------------------------------------------------------------------------------- |
+| <tt>type</tt>    | One of <tt>tx</tt>, <tt>addr</tt>, <tt>pubkey</tt>, <tt>input</tt>, <tt>output</tt> or <tt>xpub</tt> |
+| <tt>ref</tt>     | Reference to the transaction, address, public key, input, output or xpub                             |
+| <tt>label</tt>   | Label applied to the reference                                                                       |
 
-The reference is defined for each `type` as follows:
+The reference is defined for each <tt>type</tt> as follows:
 
-|----------|------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| Type     | Description                                          | Example                                                                                                           |
-|----------|------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| `tx`     | Transaction id in hexadecimal format                 | `f91d0a8a78462bc59398f2c5d7a84fcff491c26ba54c4833478b202796c8aafd`                                                |
-| `addr`   | Address in base58 or bech32 format                   | `bc1q34aq5drpuwy3wgl9lhup9892qp6svr8ldzyy7c`                                                                      |
-| `pubkey` | 32 or 33 byte public key in hexadecimal format       | `0283409659355b6d1cc3c32decd5d561abaac86c37a353b52895a5e6c196d6f448`                                              |
-| `input`  | Transaction id and input index separated by a colon  | `f91d0a8a78462bc59398f2c5d7a84fcff491c26ba54c4833478b202796c8aafd:0`                                              |
-| `output` | Transaction id and output index separated by a colon | `f91d0a8a78462bc59398f2c5d7a84fcff491c26ba54c4833478b202796c8aafd:1`                                              |
-| `xpub`   | Extended public key as defined by BIP32              | `xpub661MyMwAqRbcFtXgS5sYJABqqG9YLmC4Q1Rdap9gSE8NqtwybGhePY2gZ29ESFjqJoCu1Rupje8YtGqsefD265TMg7usUDFdp6W1EGMcet8` |
+| Type            | Description                                          | Example                                                                                                                  |
+| --------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| <tt>tx</tt>     | Transaction id in hexadecimal format                 | <tt>f91d0a8a78462bc59398f2c5d7a84fcff491c26ba54c4833478b202796c8aafd</tt>                                                |
+| <tt>addr</tt>   | Address in base58 or bech32 format                   | <tt>bc1q34aq5drpuwy3wgl9lhup9892qp6svr8ldzyy7c</tt>                                                                      |
+| <tt>pubkey</tt> | 32 or 33 byte public key in hexadecimal format       | <tt>0283409659355b6d1cc3c32decd5d561abaac86c37a353b52895a5e6c196d6f448</tt>                                              |
+| <tt>input</tt>  | Transaction id and input index separated by a colon  | <tt>f91d0a8a78462bc59398f2c5d7a84fcff491c26ba54c4833478b202796c8aafd:0</tt>                                              |
+| <tt>output</tt> | Transaction id and output index separated by a colon | <tt>f91d0a8a78462bc59398f2c5d7a84fcff491c26ba54c4833478b202796c8aafd:1</tt>                                              |
+| <tt>xpub</tt>   | Extended public key as defined by BIP32              | <tt>xpub661MyMwAqRbcFtXgS5sYJABqqG9YLmC4Q1Rdap9gSE8NqtwybGhePY2gZ29ESFjqJoCu1Rupje8YtGqsefD265TMg7usUDFdp6W1EGMcet8</tt> |
 
 ==Importing==
 

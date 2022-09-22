@@ -33,19 +33,20 @@ As a secondary goal, by using a textual format this BIP seeks to make manual or 
 ==Rationale==
 
 While there is currently no widely accepted format for exporting and importing labels, there are existing formats in use.
-[SLIP-0015][1] defines a format for exporting address and output labels, but requires encryption using a private key associated with the wallet seed, and thus cannot be used independently by coordinator wallets which cannot access private keys.
+SLIP-0015<ref>[https://github.com/satoshilabs/slips/blob/master/slip-0015.md SLIP-0015]</ref> defines a format for exporting address and output labels, but requires encryption using a private key associated with the wallet seed, and thus cannot be used independently by coordinator wallets which cannot access private keys.
 The Electrum wallet imports and exports address and transaction labels in a JSON format which could be extended to support other record types, but the JSON format used is not self describing and cannot be streamed.
 
 ==Specification==
 
 In order to make the format lightweight and well structured, this BIP uses a JSON format. 
-Further, the [JSON Lines][2] format is used (also called newline-delimited JSON). 
+Further, the JSON Lines format is used (also called newline-delimited JSON)<ref>[https://jsonlines.org/ jsonlines.org]</ref>. 
 This allows the format to be streamed, and limits the potential for formatting errors to invalidate an entire import.
 
 Further to the JSON Lines specification, an export of labels from a wallet must be a UTF-8 encoded text file, containing one record per line consisting of a valid JSON object.
 Lines are separated by `\n`.
 Each JSON object must contain 3 members, defined as follows:
 
+|-----------|------------------------------------------------------------------------------------------|
 | Reference | Description                                                                              |
 |-----------|------------------------------------------------------------------------------------------|
 | `type`    | One of `tx`, `addr`, `pubkey`, `input`, `output` or `xpub`                               |
@@ -54,6 +55,7 @@ Each JSON object must contain 3 members, defined as follows:
 
 The reference is defined for each `type` as follows:
 
+|----------|------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | Type     | Description                                          | Example                                                                                                           |
 |----------|------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | `tx`     | Transaction id in hexadecimal format                 | `f91d0a8a78462bc59398f2c5d7a84fcff491c26ba54c4833478b202796c8aafd`                                                |
@@ -87,5 +89,4 @@ TBD
 
 ==References==
 
-[1]: https://github.com/satoshilabs/slips/blob/master/slip-0015.md SLIP-0015
-[2]: https://jsonlines.org/ jsonlines.org
+<references />

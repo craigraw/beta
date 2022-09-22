@@ -91,7 +91,7 @@ The reference is defined for each <tt>type</tt> as follows:
 |-
 | <tt>xpub</tt>
 | Extended public key as defined by BIP32
-| <tt>xpub661MyMwAqRbcFtXgS5sYJABqqG9YLmC4Q1Rdap9gSE8NqtwybGhePY2gZ29ESFjqJoCu1Rupje8YtGqsefD265TMg7usUDFdp6W1EGMcet8</tt>
+| <tt>xpub661MyMwAqRbcFtXgS5sYJABqqG9YLmC4Q1Rdap9gSE8Nq...</tt>
 |}
 
 ==Importing==

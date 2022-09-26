@@ -97,6 +97,7 @@ The reference is defined for each <tt>type</tt> as follows:
 Care should be taken when exporting due to the privacy sensitive nature of the data. 
 Encryption in transit over untrusted networks is highly recommended, and encryption at rest should also be considered.
 Unencrypted exports should be deleted as soon as possible.
+For security reasons no private key types are defined.
 
 ==Importing==
 
